@@ -1,6 +1,7 @@
 {
 	"editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
 	"editor.formatOnSave": true,
+	"editor.insertSpaces": false,
 	"[typescript]": {
 		"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
 	},

@@ -6,7 +6,10 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "tesseract.js": "^2.1.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -62,6 +65,7 @@
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "classnames": "^2.3.1",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
