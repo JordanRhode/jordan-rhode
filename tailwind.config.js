@@ -3,6 +3,11 @@ module.exports = {
 	content: ['./src/**/*.{ts,tsx}'],
 	theme: {
 		extend: {
+			colors: {
+				'theme-blue': '#1c222d',
+				'theme-blue-light': '#2a3343',
+				'theme-cream': '#e0cece'
+			},
 			keyframes: {
 				blink: {
 					'0%, 100%': { opacity: '100%' },

@@ -1,6 +1,6 @@
 import { useReducer, useState } from 'react';
 import Tesseract from 'tesseract.js';
-import ReactGa from 'react-ga';
+import ReactGa, { pageview } from 'react-ga';
 import className from 'classnames';
 import classNames from 'classnames';
 
@@ -69,8 +69,8 @@ const allergens = [
 ];
 
 export default function LabelScanner() {
-	document.title = 'Scan | Jordan Rhode';
-	ReactGa.pageview(window.location.pathname);
+	document.title = 'Scan | JR';
+	pageview(window.location.pathname);
 
 	const [imagePath, setImagePath] = useState('');
 	const [text, setText] = useState('');
@@ -110,7 +110,7 @@ export default function LabelScanner() {
 	return (
 		<div className="flex flex-col w-full">
 			<div className="flex flex-col place-self-center mt-2 mb-2 gap-2 text-lg">
-				<div className="rounded-full bg-blue-400 hover:bg-blue-600 min-w-52 lg:w-96 relative text-center">
+				<div className="rounded-full bg-theme-cream min-w-52 lg:w-96 relative text-center text-theme-blue">
 					<input
 						id="ls-image-input"
 						type="file"
@@ -128,11 +128,11 @@ export default function LabelScanner() {
 						onClick={handleClick}
 						className={classNames(
 							'rounded-full w-1/2',
-							imagePath === '' ? 'bg-gray-400 cursor-default' : 'bg-blue-400 hover:bg-blue-600'
+							imagePath === '' ? 'bg-gray-400 cursor-default text-theme-blue' : 'bg-theme-cream text-theme-blue'
 						)}>
 						Process
 					</button>
-					<button onClick={toggleShowAllergens} className="rounded-full bg-blue-400 hover:bg-blue-600 w-1/2">
+					<button onClick={toggleShowAllergens} className="rounded-full bg-theme-cream w-1/2 text-theme-blue">
 						Toggle Allergens
 					</button>
 				</div>

@@ -5,16 +5,26 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import LabelScanner from './pages/label-scanner';
+import { Navigation } from './components/navigation';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const items = {
+	items: [
+		{ label: 'home', url: '/' },
+		{ label: 'scan', url: '/scan' },
+	],
+};
 root.render(
 	<React.StrictMode>
-		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/label-scanner" element={<LabelScanner />} />
-			</Routes>
-		</BrowserRouter>
+		<div className="bg-theme-blue text-theme-cream min-h-screen">
+			<Navigation {...items} />
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/scan" element={<LabelScanner />} />
+				</Routes>
+			</BrowserRouter>
+		</div>
 	</React.StrictMode>
 );
 
