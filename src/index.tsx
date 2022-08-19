@@ -5,19 +5,13 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import LabelScanner from './pages/label-scanner';
-import { Navigation } from './components/navigation';
+import { Header } from './components/header';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-const items = {
-	items: [
-		{ label: 'home', url: '/' },
-		{ label: 'scan', url: '/scan' },
-	],
-};
 root.render(
 	<React.StrictMode>
 		<div className="bg-theme-blue text-theme-cream min-h-screen">
-			<Navigation {...items} />
+			<Header />
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Home />} />

@@ -13,5 +13,6 @@
 			"rule": "*",
 			"severity": "warn"
 		}
-	]
+	],
+	"svg.preview.background": "custom"
 }

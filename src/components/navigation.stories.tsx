@@ -10,7 +10,7 @@ const Template: ComponentStory<typeof Navigation> = (args) => <Navigation {...ar
 
 export const Default = Template.bind({});
 Default.args = {
-	items: [
+	links: [
 		{ url: '', label: 'Home' },
 		{ url: '', label: 'About' },
 		{ url: '', label: 'Contact' },
