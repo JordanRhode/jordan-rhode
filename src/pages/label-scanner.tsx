@@ -1,6 +1,6 @@
 import { useReducer, useState } from 'react';
 import Tesseract from 'tesseract.js';
-import ReactGa, { pageview } from 'react-ga';
+import { pageview } from 'react-ga';
 import classNames from 'classnames';
 
 const allergens = [
